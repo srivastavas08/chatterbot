@@ -7,14 +7,17 @@ bot = ChatBot(
     storage_adapter='chatterbot.storage.MongoDatabaseAdapter',
     logic_adapters=[
         'chatterbot.logic.BestMatch',
-        'chatterbot.logic.MathematicalEvaluation',
-        'chatterbot.logic.TimeLogicAdapter'
+        # 'chatterbot.logic.MathematicalEvaluation',
+        # 'chatterbot.logic.TimeLogicAdapter'
     ],
-    database_uri= 'mongodb+srv://cluster-flaskbank.f042j.gcp.mongodb.net/FlaskBank?retryWrites=true&w=majority')
-    
+    # database_uri= 'mongodb+srv://cluster-flaskbank.f042j.gcp.mongodb.net/FlaskBank?retryWrites=true&w=majority')
+    database_uri = 'mongodb://localhost:27017/chatterbot-database')
+
+# data = open('C:\\Users\\AMINDE64\\chat\\chatterbot-corpus-1.1.2\\chatterbot_corpus\\data\\english' + files, "r").readlines()
+# bot.train(data)
 
 trainer = ChatterBotCorpusTrainer(bot)
-trainer.train("Chatterbot.corpus.english")
+trainer.train("/home/pradeep/.local/lib/python3.6/site-packages/chatterbot_corpus/data/english")
 
 print("Try something to Begin")
 while True:
