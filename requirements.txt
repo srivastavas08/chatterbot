@@ -85,7 +85,7 @@ pycparser==2.20
 pycrypto==2.6.1
 pycups==1.9.73
 pyflakes==2.2.0
-Pygments==2.6.1
+Pygments==2.7.4
 pygobject==3.26.1
 pylint==2.5.2
 pymacaroons==0.13.0
